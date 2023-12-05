@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Кнопки" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КнопкиРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Button name="ВычислитьЗначенияМаркеров" id="30">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВычислитьЗначенияМаркеров</CommandName>
+					<ExtendedTooltip name="ВычислитьЗначенияМаркеровРасширеннаяПодсказка" id="31"/>
+				</Button>
+				<Button name="ЗаписатьЗначенияМаркеров" id="32">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаписатьЗначенияМаркеров</CommandName>
+					<ExtendedTooltip name="ЗаписатьЗначенияМаркеровРасширеннаяПодсказка" id="33"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокКонтрагентов" id="1">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СписокКонтрагентов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокКонтрагентовКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКонтрагентовКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокКонтрагентовРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокКонтрагентовСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>СписокКонтрагентов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокКонтрагентовСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокКонтрагентовСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокКонтрагентовСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>СписокКонтрагентов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокКонтрагентовСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокКонтрагентовСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокКонтрагентовУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>СписокКонтрагентов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокКонтрагентовУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокКонтрагентовУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокКонтрагентовНомерСтроки" id="14">
+					<DataPath>Объект.СписокКонтрагентов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокКонтрагентовНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокКонтрагентовНомерСтрокиРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<InputField name="СписокКонтрагентовКонтрагент" id="17">
+					<DataPath>Объект.СписокКонтрагентов.Контрагент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокКонтрагентовКонтрагентКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокКонтрагентовКонтрагентРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="СписокКонтрагентовМаркерТекущий" id="20">
+					<DataPath>Объект.СписокКонтрагентов.МаркерТекущий</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокКонтрагентовМаркерТекущийКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокКонтрагентовМаркерТекущийРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СписокКонтрагентовМаркерНовый" id="23">
+					<DataPath>Объект.СписокКонтрагентов.МаркерНовый</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокКонтрагентовМаркерНовыйКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокКонтрагентовМаркерНовыйРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбновлениеМаркеровПоставщиков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВычислитьЗначенияМаркеров" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычислить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычислить значения маркеров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВычислитьЗначенияМаркеров</Action>
+		</Command>
+		<Command name="ЗаписатьЗначенияМаркеров" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать значения маркеров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьЗначенияМаркеров</Action>
+		</Command>
+	</Commands>
+</Form>
